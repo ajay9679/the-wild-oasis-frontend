@@ -2,6 +2,7 @@ import "@/app/_styles/globals.css";
 import { Josefin_Sans } from "next/font/google";
 import Header from "./_components/Header";
 import ReservationProvider from "./_components/ReservationContext";
+import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -33,6 +34,7 @@ export default function RootLayout({children}){
 			<footer className="text-center">
 				Copyright &copy; {new Date().getFullYear()} by The Wild Oasis team.
 			</footer>
+			<Analytics />
 		</body>
     </html>
 }
