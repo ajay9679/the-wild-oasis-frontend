@@ -1,6 +1,8 @@
-import {getBooking, getCabin} from '@/app/_lib/data-service';
+import {getBooking, getBookings, getCabin} from '@/app/_lib/data-service';
 import {updateReservation} from '@/app/_lib/actions';
 import SubmitButton from '@/app/_components/SubmitButton'
+import {auth} from '@/app/_lib/auth'
+
 
 
 export default async function Page({params}) {
