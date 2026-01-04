@@ -69,7 +69,7 @@ function ReservationForm({cabin, user}) {
         </div>
 
         <div className='flex justify-end items-center gap-6'>
-          {!(startDate && endDate) ? <p className='text-primary-300 text-base'>Start by selecting dates</p> : <SubmitButton pendingLabel="Reserving..." >
+          {!(startDate && endDate) ? <p className='text-primary-300 text-base'>Start by selecting dates</p> : <SubmitButton pendingLabel="Reserving...." >
             Reserve now
           </SubmitButton>}
           {/*<button className='bg-accent-500 px-8 py-4 text-primary-800 font-semibold hover:bg-accent-600 transition-all disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300'>
