@@ -3,6 +3,7 @@ import { Josefin_Sans } from "next/font/google";
 import Header from '@/app/_components/Header';
 import Logo from '@/app/_components/Logo';
 import {ReservationProvider} from '@/app/_components/ReservationContext';
+import NextTopLoader from 'nextjs-toploader'
 
 
 const josefin = Josefin_Sans({
@@ -24,6 +25,16 @@ export default function RootLayout({children}){
             <Header />
             <div className="flex-1 px-8 py-12 grid">
                 <main className="max-w-7xl mx-auto w-full">
+                    <NextTopLoader
+                        color="#2299DD" // Custom color
+                      initialPosition={0.08} // Starting position in percentage
+                      crawlSpeed={200} // Speed of the trickle
+                      height={3} // Height in pixels
+                      showSpinner={false} // Hide the default spinner
+                      easing="ease" // CSS easing animation
+                      speed={200} // Animation speed
+                      zIndex={1600} // z-index value
+                    />
                     <ReservationProvider>
                         {children}
                     </ReservationProvider>
